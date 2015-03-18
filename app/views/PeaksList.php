@@ -65,7 +65,7 @@
         <div class="clearfix"></div>
 
         <div class="row">      
-           <div class="col-xs-7">
+           <div class="col-sm-4 col-md-7">
                 <ul class="peak-thumbs">
                     <li  ng-repeat="peak in peaks | filter:query |orderBy: PeakOrder :direction">
                         <div ng-mouseover="hoverIn(peak)" ng-mouseleave="hoverOut()">
@@ -82,7 +82,7 @@
                            
 
         
-                  <div class="col-xs-5">
+                  <div class="col-sm-8 col-md-5">
                  <ui-gmap-google-map center='map.center' zoom='map.zoom'  options="map.options">              
                                                               
                        <ui-gmap-marker ng-repeat="peak in peaks | filter:query " coords="{ latitude:peak.lat, longitude: peak.lon }" idkey="0">
