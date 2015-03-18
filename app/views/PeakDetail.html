@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/custom.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <div class="row">
+        <nav class="navbar navbar-default navbar-inverse" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+
+
+        <div class="row">
+
+
+            <div class="col-md-6 col-xs-12">
+
+                <img class="img-rounded" ng-src="../../images/{{peak.name}}.jpg" />
+            </div>
+
+            <div class="col-md-6 col-xs-12">
+
+                
+                <ul><h3>{{peak.name}}</h3>
+                    <li>Elevation: {{peak.elevation | number}} feet</li>
+                    <li>Lat: {{peak.lat}}</li>
+                    <li>Lon: {{peak.lon}}</li>
+
+                </ul>
+
+            </div>
+
+             </div>
+
+
+        <hr />
+
+            <div class="row">
+                 <ui-gmap-google-map center='map.center' zoom='map.zoom' options="map.options" >
+                     <ui-gmap-marker coords="marker.coords" idkey="marker.id">
+                        </ui-gmap-marker>
+                </ui-gmap-google-map>
+            </div>
+      
+        </div>
+</body>
+</html>
